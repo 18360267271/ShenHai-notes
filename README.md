@@ -18,11 +18,21 @@
 
 https://www.yuque.com/kuangxiqiruogu/sglzt1/ydl8wy
 
+
+
 ## 云/物理服务器安装
 
 [老男孩教育-李导-手把手带你玩转物理服务器](https://www.bilibili.com/video/BV1rb411n7a8)
 
 [我在公司安装物理服务器集群的记录](C:\Users\Administrator\Desktop\ShenHai-notes\docs\安装物理服务器\物理服务器.md )
+
+
+
+### Nginx
+
+1.Nginx安装与使用
+
+
 
 ## 数仓
 
