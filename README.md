@@ -30,7 +30,13 @@ https://www.yuque.com/kuangxiqiruogu/sglzt1/ydl8wy
 
 ### Nginx
 
-1.Nginx安装与使用
+1.[Nginx安装与使用](C:\Users\Administrator\Desktop\ShenHai-notes\docs\Nginx的安装与使用\Nginx.md )
+
+
+
+### API网关
+
+#### 1.[kong](C:\Users\Administrator\Desktop\ShenHai-notes\docs\kong\kong.md )
 
 
 
