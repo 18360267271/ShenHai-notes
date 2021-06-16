@@ -40,6 +40,14 @@ https://www.yuque.com/kuangxiqiruogu/sglzt1/ydl8wy
 
 
 
+### Restful
+
+1.https://www.bilibili.com/video/BV1et411T7SS?p=2&spm_id_from=pageDriver
+
+2.百度搜索京东万象
+
+
+
 ## 数仓
 
 1.[数仓概念](C:\Users\Administrator\Desktop\ShenHai-notes\docs\数仓\数仓概念.md )
