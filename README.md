@@ -255,6 +255,14 @@ Zabbix
 
 [sqlflow](C:\Users\Administrator\Desktop\ShenHai-notes\docs\sqlflow算法\sqlflow安装和使用.md )
 
+
+
+### 运维
+
+
+
+
+
 ## 脚本
 
 [脚本合集](C:\Users\Administrator\Desktop\ShenHai-notes\docs\脚本\合集.md )
@@ -290,6 +298,8 @@ kubeflow
 ## MlFlow
 
 Mlflow安装
+
+
 
 
 
