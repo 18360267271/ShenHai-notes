@@ -26,7 +26,7 @@ https://www.yuque.com/kuangxiqiruogu/sglzt1/ydl8wy
 
 [我在公司安装物理服务器集群的记录](C:\Users\Administrator\Desktop\ShenHai-notes\docs\安装物理服务器\物理服务器.md )
 
-
+[公司服务完整搭建](C:\Users\Administrator\Desktop\ShenHai-notes\docs\公司服务完整搭建\公司服务完整搭建.md )
 
 ### Nginx
 
@@ -259,7 +259,9 @@ Zabbix
 
 ### 运维
 
+1.[Prometheus和Grafana](C:\Users\Administrator\Desktop\ShenHai-notes\Prometheus和Grafana\Prometheus和Grafana.md )
 
+2.[Grafana汉化](C:\Users\Administrator\Desktop\ShenHai-notes\Prometheus和Grafana\Grafana汉化.md )
 
 
 
