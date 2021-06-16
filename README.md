@@ -229,7 +229,7 @@ Atlas文档
 
 ### Metacat
 
-1.Metacat安装
+1.[Metacat安装](C:\Users\Administrator\Desktop\ShenHai-notes\docs\Metacat\安装.md )
 
 
 
@@ -250,6 +250,10 @@ Atlas文档
 Zabbix
 
 
+
+## 算法中台
+
+[sqlflow](C:\Users\Administrator\Desktop\ShenHai-notes\docs\sqlflow算法\sqlflow安装和使用.md )
 
 ## 脚本
 
