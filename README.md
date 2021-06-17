@@ -169,7 +169,7 @@ hbase文档
 
 [汇总Apache Hudi相关资料](https://github.com/leesf/hudi-resources)
 
-1.[Hudi概念](C:\Users\Administrator\Desktop\ShenHai-notes\docs\Hudi\概念.md )
+1.[Hudi概念](docs\Hudi\概念.md )
 
 2.[Hudi安装](C:\Users\Administrator\Desktop\ShenHai-notes\docs\Hudi\安装.md )
 
