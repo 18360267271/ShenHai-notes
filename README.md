@@ -171,7 +171,7 @@ hbase文档
 
 1.[Hudi概念](docs\Hudi\概念.md )
 
-2.[Hudi安装](C:\Users\Administrator\Desktop\ShenHai-notes\docs\Hudi\安装.md )
+2.[Hudi安装](docs/Hudi/安装.md )
 
 
 
