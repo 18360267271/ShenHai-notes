@@ -398,4 +398,6 @@ service grafana-server restartCopy to clipboardErrorCopied
 
 
 
-面板类似于export-...在三台机器上都要安装（如集群监控）
+面板类似于node-export(监控集群状态的插件)在三台机器上都要安装并且启动
+
+普罗米修斯就是监控集群的，把类似上面的插件连接上普罗米修斯（普罗米修斯采集机器的状态）

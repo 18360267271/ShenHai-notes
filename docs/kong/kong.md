@@ -623,4 +623,148 @@ curl -i -X GET http://192.168.28.118:8000/docsCopy to clipboardErrorCopied
 
 > 这里可以得到和直接访问8848一样的结果，只不过我们走了一遍网关，网关路由到了8848那边的服务。
 
-现在可以使用Grafana来查看kong网关的情况，因为Prometheus那边会抓取kong的指数
+现在可以使用Grafana来查看kong网关的情况，因为Prometheus那边会抓取kong的指数。
+
+
+
+## 总结版![star](assets/2b50.png)
+
+首先在konga上面services添加service，指定服务所在ip，端口。
+
+然后使用路由
+
+> `注意`：一个服务可以有多个路由，但是一个路由只能对应一个服务。
+>
+> 在下方Paths部分，我们可以添加多个路由list
+>
+> ![image-20210603164602180](assets/image-20210603164602180.png)
+
+### superset
+
+```
+curl -i -X POST http://192.168.28.118:8001/services/superset/routes \
+--data 'paths[]=/superset' \
+ --data 'name=superset'Copy to clipboardErrorCopied
+```
+
+> 此处的ip还是kong所在的ip
+>
+> services/{服务名称}/routes
+
+<http://192.168.28.118:8000/superset>
+
+### griffin
+
+> path需要加上/health
+
+```
+curl -i -X POST http://192.168.28.118:8001/services/griffin/routes \
+--data 'paths[]=/griffin' \
+--data 'name=griffin'Copy to clipboardErrorCopied
+```
+
+<http://192.168.28.118:8000/griffin>
+
+> 这里遇到问题，因为griffin是前后端分离的，而kong默认不支持前端。Nginx可以。
+>
+> kong必须要使用插件才能完成配置
+
+### grafana
+
+```
+curl -i -X POST http://localhost:8001/services/grafana/routes \
+--data 'paths[]=/grafana' \
+ --data 'name=grafana'Copy to clipboardErrorCopied
+```
+
+<http://192.168.28.118:8000/grafana>
+
+出问题：
+
+> **If you're seeing this Grafana has failed to load its application files**
+>
+> \1. This could be caused by your reverse proxy settings.
+>
+> \2. If you host grafana under subpath make sure your grafana.ini root_url setting includes subpath. If not using a reverse proxy make sure to set serve_from_sub_path to true.
+>
+> \3. If you have a local dev build make sure you build frontend using: yarn start, yarn start:hot, or yarn build
+>
+> \4. Sometimes restarting grafana-server can help
+>
+> \5. Check if you are using a non-supported browser. For more information, refer to the list of [supported browsers](https://grafana.com/docs/grafana/latest/installation/requirements/#supported-web-browsers).
+
+需要设置代理
+
+# Kong压力测试
+
+参考：<https://github.com/40288668/gateway-pressure>
+
+[Wrk和Jmeter的差异](https://blog.csdn.net/chiboxi6938/article/details/88635614)
+
+使用Jemeter做压测
+
+下载：<http://jmeter.apache.org/download_jmeter.cgi>
+
+点击`bin/jmeter.bat`
+
+不成功就用管理员身份打开
+
+`新建一个线程组`
+
+![image-20210603172706908](assets/image-20210603172706908.png)
+
+`设置线程组参数`。这里配置为：10个线程，同时启动，循环一次。
+
+> 一个线程就相当于一个用户
+
+![image-20210603172749654](assets/image-20210603172749654.png)
+
+` 新增http请求默认值`。 在上一步创建的线程组上，新增http请求默认值，所有的请求都会使用设置的默认值，这设置协议为`http`，IP为`192.168.28.118`，端口为`8000`。
+
+![image-20210603172853130](assets/image-20210603172853130.png)
+
+![image-20210603173007462](assets/image-20210603173007462.png)
+
+`添加要压测的http请求。`
+
+![image-20210603173045213](assets/image-20210603173045213.png)
+
+下图第一个红框内的协议、IP、端口不需要设置，会使用步骤c中设置的默认值，只需设置请求路径`Path`即可，这里填入`/fastapi`。
+
+![image-20210603173234827](assets/image-20210603173234827.png)
+
+`新增监听器，用于查看压测结果`。这里添加三种：聚合报告、图形结果、用表格查看结果，区别在于结果展现形式不同。
+
+![image-20210603173302630](assets/image-20210603173302630.png)
+
+`点击运行按钮开始压测，并查看结果。`
+
+![image-20210603173408071](assets/image-20210603173408071.png)
+
+![image-20210603175419197](assets/image-20210603175419197.png)
+
+```
+Label：每个 JMeter 的 element（例如 HTTP Request）都有一个 Name 属性，这里显示的就是 Name 属性的值
+
+Samples：表示你这次测试中一共发出了多少个请求，如果模拟10个用户，每个用户迭代10次，那么这里显示100
+
+Average：平均响应时间——默认情况下是单个 Request 的平均响应时间，当使用了 Transaction Controller 时，也可以以Transaction 为单位显示平均响应时间
+
+Median：中位数，也就是 50％ 用户的响应时间
+
+90% Line：90％ 用户的响应时间
+
+Note：关于 50％ 和 90％ 并发用户数的含义，请参考下文
+
+http://www.cnblogs.com/jackei/archive/2006/11/11/557972.html
+
+Min：最小响应时间
+
+Max：最大响应时间
+
+Error%：本次测试中出现错误的请求的数量/请求的总数
+
+Throughput：吞吐量——默认情况下表示每秒完成的请求数（Request per Second），当使用了 Transaction Controller 时，也可以表示类似 LoadRunner 的 Transaction per Second 数
+
+KB/Sec：每秒从服务器端接收到的数据量，相当于LoadRunner中的Throughput/Sec
+```
