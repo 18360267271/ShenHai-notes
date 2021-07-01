@@ -393,3 +393,9 @@ service grafana-server restartCopy to clipboardErrorCopied
 ```
 
 ![image-20210602100103325](https://glong1997.github.io/XiYun-Notes/images/image-20210602100103325.png)
+
+
+
+
+
+面板类似于export-...在三台机器上都要安装（如集群监控）

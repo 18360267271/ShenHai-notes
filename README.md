@@ -187,6 +187,10 @@ hbase文档
 
 ## 数据处理
 
+### Zeppelin
+
+1.[zeppelin安装和使用](C:\Users\Administrator\Desktop\ShenHai-notes\docs\Zeppelin\zeppelin安装和使用.md )
+
 
 
 ### Flink
@@ -214,6 +218,12 @@ kylin文档
 ### Griffin
 
 1.[Griffin部署](C:\Users\Administrator\Desktop\ShenHai-notes\docs\Griffin\部署.md )
+
+
+
+### 任务调度
+
+1.[DolphinScheduler安装和使用](C:\Users\Administrator\Desktop\ShenHai-notes\docs\Dolphinscheduler\DolphinScheduler安装和使用.md )
 
 
 
