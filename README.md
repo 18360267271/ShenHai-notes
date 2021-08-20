@@ -237,13 +237,11 @@ Presto部署
 
 ## 数据质量
 
-
-
 ### Griffin
 
 1.[Griffin部署](C:\Users\Administrator\Desktop\ShenHai-notes\docs\Griffin\部署.md )
 
-1
+
 
 ### 任务调度
 
@@ -256,8 +254,6 @@ Presto部署
 
 
 ## 元数据管理
-
-
 
 ### Atlas
 
@@ -274,8 +270,6 @@ Atlas文档
 
 
 ## 数据可视化
-
-
 
 ### Superset
 
