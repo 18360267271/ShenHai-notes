@@ -249,6 +249,10 @@ Presto部署
 
 1.[DolphinScheduler安装和使用](C:\Users\Administrator\Desktop\ShenHai-notes\docs\Dolphinscheduler\DolphinScheduler安装和使用.md )
 
+2.oozie
+
+3.azkaban
+
 
 
 ## 元数据管理
