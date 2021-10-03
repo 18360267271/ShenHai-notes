@@ -87,3 +87,96 @@ sbin/nginxCopy to clipboardErrorCopied
 (base) [root@glong sbin]# ./nginx -s reopen        #  
 (base) [root@glong sbin]# ./nginx -s stop          #停止
 ```
+
+
+## 自己操作过的步骤
+
+### Nginx入门
+
+#### **简介** 
+
+*Nginx* ("engine x") 是一个高性能的HTTP**和反向代理服务器**,特点是占有内存少，并发能力强，事实上nginx的并发能力确实在同类型的网页服务器中表现较好，中国大陆使用nginx网站用户有：百度、京东、新浪、网易、腾讯、淘宝等。
+
+#### **Nginx** **功能** 
+
+1) 反向代理
+
+ 
+
+什么是反向代理？先看什么是正向代理
+
+ ![img](file:///C:\Users\ADMINI~1\AppData\Local\Temp\ksohtml17560\wps1.jpg)
+
+再看什么是反向代理
+
+ ![img](file:///C:\Users\ADMINI~1\AppData\Local\Temp\ksohtml17560\wps2.jpg)
+
+ 
+
+ 
+
+2) 负载均衡
+
+![img](assets/wps3.jpg) 
+
+负载均衡策略： 轮询
+
+​               权重
+
+​               备机
+
+ 
+
+ 
+
+3) 动静分离
+
+![img](file:///C:\Users\ADMINI~1\AppData\Local\Temp\ksohtml17560\wps4.jpg) 
+
+ 
+
+#### **3****.1.3** **安装** 
+
+#####  **1****）** **yum****安装依赖包**
+
+ 
+
+ 
+
+##### **2） 安装依赖包**
+
+--prefix=要安装到的目录
+
+ 
+
+##### **3） 启动、关闭命令n****ginx**
+
+ 
+
+**如果启动时报错：**
+
+ 
+
+ 
+
+ 
+
+ 
+
+#### **3****.1****.4**   **赋权限**
+
+nginx占用80端口，默认情况下非root用户不允许使用1024以下端口
+
+ 
+
+ 
+
+#### **3****.1****.****5**   **修改****/bigdata/nginx/conf/nginx.conf**
+
+ 
+
+ 
+
+ 
+
+### **3.2**  **集群脚本**

@@ -1,6 +1,6 @@
 # 简历
 
-[待完善](C:\Users\Administrator\Desktop\ShenHai-notes\docs\沈海的简历\简历.md )
+[待完善](docs/沈海的简历/简历.md )
 
 # 数据结构
 
