@@ -48,14 +48,6 @@ https://www.yuque.com/kuangxiqiruogu/sglzt1/ydl8wy
 
 
 
-## 数仓
-
-1.[数仓概念](C:\Users\Administrator\Desktop\ShenHai-notes\docs\数仓\数仓概念.md )
-
-2.[数仓需求](C:\Users\Administrator\Desktop\ShenHai-notes\docs\数仓\数仓需求.md )
-
-3.[数仓架构](C:\Users\Administrator\Desktop\ShenHai-notes\docs\数仓\数仓架构.md )
-
 
 
 ## 数据中台
@@ -88,7 +80,7 @@ https://www.yuque.com/kuangxiqiruogu/sglzt1/ydl8wy
 
 ### Flume
 
-Flume文档
+[Flume文档](C:\Users\Administrator\Desktop\ShenHai-notes\docs\Flume\尚硅谷Flume.md )
 
 ```
 flume-ng agent --conf-file /opt/module/flume/conf/file-flume-hdfs.conf --name agent1 --conf conf -Dflume.root.logger=INFO,console 
