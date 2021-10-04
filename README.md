@@ -14,6 +14,10 @@
 
 
 
+# mysql
+
+
+
 # 大数据
 
 大数据最初，3台安装Linux系统的虚拟机集群，至少16G
@@ -363,7 +367,7 @@ kubeflow
 
 ## MlFlow
 
-Mlflow安装
+[Mlflow安装](docs/Mlflow/安装.md )
 
 
 
@@ -515,7 +519,7 @@ Mlflow安装
 
 # 清数研究院实习日志及相关资料
 
-
+实习笔记
 
 # 其他
 
