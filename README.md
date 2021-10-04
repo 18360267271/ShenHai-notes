@@ -139,6 +139,12 @@ hadoop文档
 
 
 
+#### 分布式协调服务
+
+zookeeper
+
+
+
 ### HDFS
 
 hdfs文档
