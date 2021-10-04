@@ -82,6 +82,12 @@ https://www.yuque.com/kuangxiqiruogu/sglzt1/ydl8wy
 
 
 
+### Sqoop
+
+
+
+
+
 ### Flume
 
 [Flume文档](C:\Users\Administrator\Desktop\ShenHai-notes\docs\Flume\尚硅谷Flume.md )
@@ -187,6 +193,12 @@ hbase文档
 
 
 
+### ElasticSearch
+
+安装
+
+使用+kubana
+
 ## 数据处理
 
 ### Zeppelin
@@ -203,9 +215,17 @@ Flink文档
 
 ### Spark
 
-Spark文档
+sparkcore
+
+sparksql
+
+sparkstreaming
 
 
+
+
+
+## 即席查询
 
 ### Kylin
 
@@ -487,7 +507,7 @@ Mlflow安装
 
 
 
-# 实习日志
+# 清数研究院实习日志及相关资料
 
 
 
