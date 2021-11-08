@@ -157,7 +157,7 @@ Copy to clipboardErrorCopied
 
 发送非常关键，下面我们开始介绍send函数
 
-#### [Producer核心流程概览]
+#### [Producer核心发送数据流程概览]
 
 ![Kafka_Producer核心流程](https://glong1997.github.io/XiYun-Notes/%E5%A4%A7%E6%95%B0%E6%8D%AE/%E6%95%B0%E6%8D%AE%E5%AD%98%E5%82%A8/kafka/imgaes/Kafka_Producer%E6%A0%B8%E5%BF%83%E6%B5%81%E7%A8%8B.png)
 
@@ -199,6 +199,13 @@ Copy to clipboardErrorCopied
 
 ​     3.2 leader consumer
 
-​      3.3 consumer rebalace
+​     3.3 consumer rebalace
 
-04
+
+
+Producer：
+
+构建producer对象，进行序列化，集群地址等配置，通过send将消息发送给远程的集群，发送过程中将消息封装成record对象，发送分为同步发送和异步发送，同步发送效率比较低，一般采用异步发送，异步发送怎样判断消息是否发送成功，加上回调函数，通过回调函数oncompletion来判断当前消息是否发送成功，若发送成功不必关心，若发送失败，则做一些补偿机制避免数据出现丢失。
+
+
+
