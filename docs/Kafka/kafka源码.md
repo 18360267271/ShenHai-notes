@@ -170,3 +170,35 @@ Copy to clipboardErrorCopied
 ## [生产者源码之生产者源码精华总结]
 
 ![image-20210810211310698](https://glong1997.github.io/XiYun-Notes/%E5%A4%A7%E6%95%B0%E6%8D%AE/%E6%95%B0%E6%8D%AE%E5%AD%98%E5%82%A8/kafka/imgaes/image-20210810211310698.png)
+
+
+
+
+
+
+
+
+
+一、kafka源码分析内容概括
+
+1.Producer生产数据的流程分析
+
+2.Broker端分析
+
+​    2.1 broker如何接受数据（要支持高并发）
+
+​    2.2 数据如何写入（leader partition）
+
+​    2.3 副本同步数据（HW LEO）
+
+​    2.4 kafka集群管理（controller、zookeeper）
+
+3.Consumer消费数据的流程分析
+
+​     3.1 coordinator
+
+​     3.2 leader consumer
+
+​      3.3 consumer rebalace
+
+04
